@@ -24,7 +24,7 @@ class Application(tk.Frame):
         # 色の設定を変更する場合 : http://www.tcl.tk/man/tcl/TkCmd/colors.htm
         # Labelについて : https://kuroro.blog/python/Pj4Z7JBNRvcHZvtFqiKD/
         label1 = tk.Label(frame, text="label1",
-                          width=30, height=15, bg="red")
+                          width=10, height=10, bg="red")
 
         # frame Widget(Frame)を親要素として、label Widgetを作成する。
         # text : テキスト情報
@@ -34,7 +34,7 @@ class Application(tk.Frame):
         # 色の設定を変更する場合 : http://www.tcl.tk/man/tcl/TkCmd/colors.htm
         # Labelについて : https://kuroro.blog/python/Pj4Z7JBNRvcHZvtFqiKD/
         label2 = tk.Label(frame, text="label2",
-                          width=30, height=15, bg="green")
+                          width=10, height=10, bg="green")
 
         # frame Widget(Frame)を親要素として、label Widgetを作成する。
         # text : テキスト情報
@@ -44,7 +44,7 @@ class Application(tk.Frame):
         # 色の設定を変更する場合 : http://www.tcl.tk/man/tcl/TkCmd/colors.htm
         # Labelについて : https://kuroro.blog/python/Pj4Z7JBNRvcHZvtFqiKD/
         label3 = tk.Label(frame, text="labal3",
-                          width=30, height=15, bg="yellow")
+                          width=10, height=10, bg="yellow")
 
         # frame Widget(Frame)を親要素として、label Widgetをどのように配置するのか？
         label1.grid()
