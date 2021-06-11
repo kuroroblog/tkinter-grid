@@ -3,39 +3,59 @@ import tkinter as tk
 
 class Application(tk.Frame):
     def __init__(self, master=None):
-        # windowの初期設定を行う。
+        # Windowの初期設定を行う。
         super().__init__(master)
 
-        # windowの画面サイズを設定する。
+        # Windowの画面サイズを設定する。
         # geometryについて : https://kuroro.blog/python/rozH3S2CYE0a0nB3s2QL/
         self.master.geometry("300x200")
 
-        # window内にframeを作成する。
+        # Windowを親要素として、frame Widget(Frame)を作成する。
         # Frameについて : https://kuroro.blog/python/P20XOidA5nh583fYRvxf/
-        frame1 = tk.Frame(self.master)
-        # frame1内にラベル1を作成する。
-        # Labelについて : https://kuroro.blog/python/Pj4Z7JBNRvcHZvtFqiKD/
-        label1 = tk.Label(frame1, text="1",
-                          width=30, height=15, bg="orchid4")
-        # frame1内にラベル2を作成する。
-        # Labelについて : https://kuroro.blog/python/Pj4Z7JBNRvcHZvtFqiKD/
-        label2 = tk.Label(frame1, text="2",
-                          width=30, height=15, bg="dark turquoise")
-        # frame1内にラベル3を作成する。
-        # Labelについて : https://kuroro.blog/python/Pj4Z7JBNRvcHZvtFqiKD/
-        label3 = tk.Label(frame1, text="3",
-                          width=30, height=15, bg="MidnightBlue")
-        # ラベルをフレームに配置
-        label1.grid()
-        label2.grid()
-        label3.grid()
-        # window上に配置
-        frame1.grid()
+        frame = tk.Frame(self.master)
+        # Windowを親要素として、frame Widget(Frame)をどのように配置するのか？
+        frame.grid()
 
+        # frame Widget(Frame)を親要素として、label Widgetを作成する。
+        # text : テキスト情報
+        # width : 幅の設定
+        # height : 高さの設定
+        # bg : 背景色の設定
+        # 色の設定を変更する場合 : http://www.tcl.tk/man/tcl/TkCmd/colors.htm
+        # Labelについて : https://kuroro.blog/python/Pj4Z7JBNRvcHZvtFqiKD/
+        label1 = tk.Label(frame, text="label1",
+                          width=30, height=15, bg="red")
+
+        # frame Widget(Frame)を親要素として、label Widgetを作成する。
+        # text : テキスト情報
+        # width : 幅の設定
+        # height : 高さの設定
+        # bg : 背景色の設定
+        # 色の設定を変更する場合 : http://www.tcl.tk/man/tcl/TkCmd/colors.htm
+        # Labelについて : https://kuroro.blog/python/Pj4Z7JBNRvcHZvtFqiKD/
+        label2 = tk.Label(frame, text="label2",
+                          width=30, height=15, bg="green")
+
+        # frame Widget(Frame)を親要素として、label Widgetを作成する。
+        # text : テキスト情報
+        # width : 幅の設定
+        # height : 高さの設定
+        # bg : 背景色の設定
+        # 色の設定を変更する場合 : http://www.tcl.tk/man/tcl/TkCmd/colors.htm
+        # Labelについて : https://kuroro.blog/python/Pj4Z7JBNRvcHZvtFqiKD/
+        label3 = tk.Label(frame, text="labal3",
+                          width=30, height=15, bg="yellow")
+
+        # frame Widget(Frame)を親要素として、label Widgetをどのように配置するのか？
+        label1.grid()
+        # frame Widget(Frame)を親要素として、label Widgetをどのように配置するのか？
+        label2.grid()
+        # frame Widget(Frame)を親要素として、label Widgetをどのように配置するのか？
+        label3.grid()
 
 if __name__ == "__main__":
     root = tk.Tk()
     app = Application(master=root)
-    # windowをループさせて、継続的にwindow表示させる。
+    # Windowをループさせて、継続的にWindow表示させる。
     # mainloopについて : https://kuroro.blog/python/DmJdUb50oAhmBteRa4fi/
     app.mainloop()
