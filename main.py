@@ -51,6 +51,8 @@ class Application(tk.Frame):
         label3.grid()
 
 if __name__ == "__main__":
+    # Windowを生成する。
+    # Windowについて : https://kuroro.blog/python/116yLvTkzH2AUJj8FHLx/
     root = tk.Tk()
     app = Application(master=root)
     # Windowをループさせて、継続的にWindow表示させる。
